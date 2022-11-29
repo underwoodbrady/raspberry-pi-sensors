@@ -5,7 +5,7 @@ Web server to display sensor data gathered from Raspberry Pi GPIO Pins
 Includes console to send commands to server:
 
 * **/ping** - prints ping between client and server
-* **/test1 /test2** - prints raw
+* **/test1 /test2** - prints raw sensor data
 
 Sensor 1: DHT 11
 
