@@ -75,6 +75,7 @@ io.sockets.on("connection", (socket) => {
 
         switch (data) {
             case "/ping":
+            case "/p":
                 socket.emit("startPingTest");
                 break;
             case "/test1":
@@ -100,7 +101,7 @@ io.sockets.on("connection", (socket) => {
                 addToChat("[SERVER]", socket.handshake.headers.host);
                 break;
             default:
-                addToChat("[SERVER]", `Unknown command "${data.substring(1)}"`)
+                addToChat("[SERVER]", `Unknown command "${data}"`)
                 break;
         }
     });
