@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/client/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Rover Data 🟢</title>
+</head>
+
+<body>
+
+    <div class="box-container">
+        <section class="box box-shadow box-small secondary-fill box-spacing">
+            <div class="data-table">
+                <div class="data-field">
+                    <h1>Habitability Score</h1>
+                    <div class="habitability-score">
+                        <h3>9.2</h3>
+                        <img src="/client/imgs/star.svg" width="35" class="star-icon" />
+                    </div>
+                </div>
+                <div class="data-field">
+                    <img src="/client/imgs/earth.svg" width="75" class="earth-icon" />
+                </div>
+            </div>
+        </section>
+        <section id="console-box" class="box box-shadow primary-fill box-spacing">
+            <div id="console">
+                <div id="chat-text" class="text-area">
+                </div>
+                <form id="chat-form" class="text-field">
+                    <input id="chat-input" class="text-input">
+
+                    </input>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <section class="box box-shadow primary-fill box-spacing">
+        <h2>Weather Sensor</h2>
+        <div id="weather-connection" class="connection-indicator connected"></div>
+        <div class="center-children-v">
+            <div class="data-table">
+                <div class="data-field display-flex">
+                    <h4>Air Quality</h4>
+                    <div class="gauge-container">
+                        <img src="/client/imgs/gauge.svg" class="gauge-colors" />
+                    </div>
+                    <p>10.3</p>
+                </div>
+                <div class="data-field">
+                    <h4>Pressure</h4>
+                    <div class="thermometer-container">
+                        <div class="thermometer-base pressure-color">
+                            <div class="thermometer-base-shadow pressure-shadow"></div>
+                        </div>
+                        <div class="thermometer-fill pressure-color">
+                            <div class="thermometer-fill-shadow pressure-shadow">
+
+                            </div>
+                        </div>
+                        <div class="thermometer-lines">
+
+                        </div>
+                    </div>
+                    <p>2</p>
+                </div>
+                <div class="data-field">
+                    <h4>Temperature</h4>
+                    <div class="thermometer-container">
+                        <div class="thermometer-base temperature-color">
+                            <div class="thermometer-base-shadow temperature-shadow"></div>
+                        </div>
+                        <div class="thermometer-fill temperature-color">
+                            <div class="thermometer-fill-shadow temperature-shadow">
+
+                            </div>
+                        </div>
+                        <div class="thermometer-lines">
+
+                        </div>
+                    </div>
+                    <p>76&#176;</p>
+                </div>
+            </div>
+        </div>
+        <p class="last-update"> <img src="/client/imgs/clock.svg" width="12" class="clock-icon" />
+            Last update 9:23pm</p>
+    </section>
+
+    <section class="box box-shadow primary-fill box-spacing">
+        <h2>Air Sensor</h2>
+        <div id="air-connection" class="connection-indicator disconnected"></div>
+        <div class="connection-error">
+            <img src="/client/imgs/caution.svg" width="70" class="connection-error-icon" />
+            Can't collect data
+        </div>
+        <p class="last-update"> <img src="/client/imgs/clock.svg" width="12" class="clock-icon" />
+            Last update 0:00am</p>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+</body>
+
+</html>
