@@ -3,7 +3,7 @@ let express = require("express"),
     serv = require("http").Server(app),
     path = require("path");
 
-/* ONLY ON RASPBERRY PI
+/* ONLY ON RASPBERRY PI "npm install node-dht-sensor"
 const sensor = require("node-dht-sensor");
 */
 
