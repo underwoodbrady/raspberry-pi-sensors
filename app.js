@@ -51,6 +51,9 @@ let testOne = () => {
     sensor.read(11, 17, function(err, temperature, humidity) {
         if (!err) {
           console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
+          return `temp: ${temperature}°C, humidity: ${humidity}%`;
+        }else{
+            return `${err}`;
         }
       });
       */
