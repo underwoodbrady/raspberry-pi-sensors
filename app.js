@@ -3,6 +3,10 @@ let express = require("express"),
     serv = require("http").Server(app),
     path = require("path");
 
+/* ONLY ON RASPBERRY PI
+const sensor = require("node-dht-sensor");
+*/
+
 let requests = [];
 
 app.get("/", function (req, res) {
@@ -43,6 +47,13 @@ let addToChat = (ip, chat) =>{
 }
 
 let testOne = () => {
+    /* ONLY ON RASPBERRY PI
+    sensor.read(11, 17, function(err, temperature, humidity) {
+        if (!err) {
+          console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
+        }
+      });
+      */
     return "No data";
 }
 
@@ -57,6 +68,7 @@ let resetOne = () => {
 let resetTwo = () => {
     return "Reset sensor two";
 }
+
 
 io.sockets.on("connection", (socket) => {
     socket.ping = 0;
